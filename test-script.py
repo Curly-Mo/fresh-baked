@@ -18,9 +18,9 @@ if __name__ == '__main__':
     print(cookie_path)
     extra_context = {
         "python_version": sys.version[:3],  # install with travis python V
-        "create_developer_env_after_scapfolding": "n",
+        "create_dev_virtualenv_now": "n",
     }
-    
+
     cookiecutter(
         cookie_path,
         no_input=True,

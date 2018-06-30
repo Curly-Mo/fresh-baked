@@ -5,10 +5,10 @@ MODULE:={{ cookiecutter.project_slug }}
 all: dev style checks requirements.txt build dists doc test-unit test-coverage
 
 dev:
-	pipenv install --dev --python {{cookiecutter.python_version}}
+	pipenv install --dev --three --pre
 
 install-local:
-	pipenv install --python {{cookiecutter.python_version}}
+	pipenv install --three
 
 install-system:
 	pipenv install --system
@@ -40,12 +40,10 @@ test-coverage:
 requirements.txt:
 	{% if cookiecutter.library_or_app == 'library' %}
 	# generate requirements.txt from Pipfile
-	# needed until PBR supports `Pipfile`
 	pipenv run pipenv_to_requirements
 	{% endif %}
 	{% if cookiecutter.library_or_app == 'app' %}
 	# generate requirements.txt frm Pipfile.lock
-	# needed until PBR supports `Pipfile`
 	pipenv run pipenv_to_requirements -f
 	{% endif %}
 
@@ -71,7 +69,7 @@ update:
 	pipenv update -d
 
 githook: checks style requirements.txt
-	
+
 push:
 	git status
 	git push origin --all
@@ -82,7 +80,7 @@ doc:
 
 doc-auto:
 	pipenv run sphinx-autobuild docs docs/_build
-	
+
 clean: clean-build clean-pyc clean-test ## remove all build, test, coverage and Python artifacts
 
 

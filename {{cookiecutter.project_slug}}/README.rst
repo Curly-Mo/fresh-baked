@@ -11,13 +11,13 @@
    :target: https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.project_name }}
 .. image:: https://badge.fury.io/py/{{ cookiecutter.project_name }}.svg
    :target: https://pypi.python.org/pypi/{{ cookiecutter.project_name }}/
-   :alt: Pypi package
+   :alt: PyPi package
 
 
 {{ cookiecutter.project_short_description}}
 
 
-* License : {{ cookiecutter.open_source_license}} 
+* License : {{ cookiecutter.open_source_license}}
 * Documentation: https://{{ cookiecutter.project_name }}.readthedocs.org/en/latest/
 * Source: https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}
 
