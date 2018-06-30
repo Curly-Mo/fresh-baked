@@ -1,0 +1,27 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+
+[dev-packages]
+flake8 = "*"
+black = "*"
+isort = "*"
+{% if cookiecutter.use_pypi_deployment_with_travis == 'y' %}
+cryptography = "*"
+PyYAML = "*"
+{% endif %}
+pytest = "*"
+pytest-cov = "*"
+tox = "*"
+pipenv-to-requirements = "*"
+"flake8-coding" = "*"
+"flake8-comprehensions" = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+pytest-pythonpath = "*"
+pytest-env ="*"
+twine = "*"
+
+
+[packages]
+pbr = ">=3.0"
