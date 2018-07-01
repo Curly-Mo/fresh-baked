@@ -1,6 +1,6 @@
-.. image:: https://travis-ci.org/jgirardet/cookiecutter-pipenv.svg?branch=master
-    :target: https://travis-ci.org/jgirardet/cookiecutter-pipenv
-    
+.. image:: https://travis-ci.org/Curly-Mo/fresh-baked.svg?branch=master
+    :target: https://travis-ci.org/Curly-Mo/fresh-baked
+
 
 A pipenv friendly cookie-cutter template
 ===================================================
@@ -27,7 +27,7 @@ See https://github.com/audreyr/cookiecutter for more information about Cookiecut
 - Source code is horst on **Github**
 - Free software: **GPL, MIT, ...**
 - **Badges** for Travis, Coverage, Pypi, ReadTheDoc
-- You choose your vesion of python at install : **3.5, 3.6** 
+- You choose your vesion of python at install : **3.5, 3.6**
 - **PBR**: handle automatic versioning based on Git Tag, automatic creation of `ChangeLog` and
   `AUTHORS` files
 - **Pypi**: automatic deployment of distribution package or wheels on successful Travis Tag build
@@ -51,9 +51,9 @@ Do not create a folder for your project, it will be automatically created.
 
     .. code-block:: bash
 
-        $ pip3 install --user --upgrade pipenv cookiecutter
+        $ pip install --user --upgrade cookiecutter
 
-        $ cookiecutter https://github.com/jgirardet/cookiecutter-pipenv
+        $ cookiecutter https://github.com/Curly-Mo/fresh-baked
 
 At start it will ask you for libray or app.
 This is important depending the way you want dependencies work.
@@ -102,15 +102,15 @@ Basic Workflow
     - autogenerate requirements.txt and requirements-dev.txt
 
   .. code-block:: bash
-  
+
       make githook
       add/commit your work
       make push
 
 Run tests
   .. code-block:: bash
-  
-      make test 
+
+      make test
       make test-coverage
 
   depending what you want.
@@ -148,11 +148,11 @@ Make the Doc:
       make doc-auto
 
   This launch a mini server and doc is rebuild for each change.
-  readTheDoc neads requirements files so you need to a ``make requirements`` or ``make all`` to make it work. 
+  readTheDoc neads requirements files so you need to a ``make requirements`` or ``make all`` to make it work.
 
 Clean everything:
   .. code-block:: bash
-  
+
       make clean
 
 Manual Deploy:
@@ -179,13 +179,13 @@ ChangeLog after Fork
 - subversion of python at install (3.5, 3.6 etc)
 - Sphinx
 - Makefile added docs command
-- Pipfile : django conditionnal 
+- Pipfile : django conditionnal
 - setup.cfg : doc directory
 - remove pylint
 - pytest-pythonpath + pytest.ini
 - make doc-auto : sphinx-autobuild
 - Pipfile.lock is not ignored anymore  by default
-- write oc : lounc pipi with pipenv 
+- write oc : lounc pipi with pipenv
 - package is library or app
 - apistar : getenv, pytest fixture, app
 - remove test-scipt.sh add test-script.py
