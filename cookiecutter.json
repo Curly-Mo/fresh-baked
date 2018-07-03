@@ -1,15 +1,12 @@
 {
-	"library_or_app": ["library", "app"],
 	"full_name": "Cool Dude",
 	"email": "rad@example.com",
 	"project_name": "my_project_name",
 	"project_short_description": "Short Description of My Library",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
-	"open_source_license": ["GNU General Public License v3","MIT license", "BSD license", "ISC license", "Apache Software License 2.0", "Not open source"],
+	"open_source_license": ["LGPL-3.0","MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "Not open source (I'm a bad person)"],
 	"project_version": "0.1.0",
 	"github_username": "github_username",
 	"pypi_username": "{{ cookiecutter.github_username }}",
-	"github_repository_name": "{{ cookiecutter.project_slug }}",
-	"use_pypi_deployment_with_travis": "y",
-	"create_dev_virtualenv_now": "y"
+	"github_repository_name": "{{ cookiecutter.project_slug }}"
 }

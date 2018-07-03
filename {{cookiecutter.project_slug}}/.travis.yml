@@ -4,11 +4,11 @@
 language: python
 
 python:
+  - 3.4
   - 3.5
   - 3.6
-  - 3.6-dev
   - 3.7
-  # - 3.7
+  - 3.7-dev
   # - pypy3.6
 
 install:
@@ -25,18 +25,3 @@ notifications:
   email:
     on_success: change
     on_failure: change
-
-{% if cookiecutter.use_pypi_deployment_with_travis == 'y' -%}
-# After you create the Github repo and add it to Travis,
-# $ pip install travis
-# $ travis encrypt --add deploy.password
-deploy:
-  provider: pypi
-  distributions: sdist bdist_wheel
-  user: {{ cookiecutter.pypi_username }}
-  password:
-    secure: PLEASE_REPLACE_ME
-  on:
-    tags: true
-    repo: {{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}
-{%- endif %}

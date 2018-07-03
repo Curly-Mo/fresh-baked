@@ -1,15 +1,21 @@
 language: python
 
 python:
-    - "3.6"
-    
+  - 3.4
+  - 3.5
+  - 3.6
+  - 3.7
+  - 3.7-dev
+  # - pypy3.6
+
 install:
   - pip install pipenv cookiecutter
-
-env:
-  - PIPENV_IGNORE_VIRTUALENVS=1
+  - pip install tox-travis
 
 script:
-  - python test-script.py 
-  - cd my_project_name
-  - make all
+  - tox
+
+notifications:
+  email:
+    on_success: change
+    on_failure: change
