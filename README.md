@@ -1,6 +1,6 @@
 # Fresh Baked
 
-[![Build Status](https://travis-ci.org/Curly-Mo/fresh-baked.svg?branch=master](https://travis-ci.org/Curly-Mo/fresh-baked)
+[![Build Status](https://travis-ci.org/Curly-Mo/fresh-baked.svg?branch=master)](https://travis-ci.org/Curly-Mo/fresh-baked)
 
 A modern python cookiecutter template
 
