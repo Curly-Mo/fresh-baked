@@ -26,7 +26,7 @@ def main():
 
         version = sys.version_info
         tox_env = 'py{major}{minor}'.format(major=version.major, minor=version.minor)
-        os.chdir('my_project_name')
+        os.chdir('fresh_baked_skeleton')
         subprocess.check_call(['tox', '-e', tox_env])
 
 

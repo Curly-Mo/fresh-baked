@@ -1,7 +1,7 @@
 {
 	"full_name": "Cool Dude",
 	"email": "rad@example.com",
-	"project_name": "my_project_name",
+	"project_name": "Fresh Baked Skeleton",
 	"project_short_description": "Short Description of My Library",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_') }}",
 	"open_source_license": ["LGPL-3.0","MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "Not open source (I'm a bad person)"],

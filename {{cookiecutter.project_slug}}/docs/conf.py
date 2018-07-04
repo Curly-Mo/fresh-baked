@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 #
 # {{cookiecutter.project_slug}} documentation build configuration file, created by
 # sphinx-quickstart on Mon Jan 29 13:52:02 2018.
