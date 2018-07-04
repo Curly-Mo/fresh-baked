@@ -8,5 +8,5 @@
 	"project_version": "0.1.0",
 	"github_username": "github_username",
 	"pypi_username": "{{ cookiecutter.github_username }}",
-	"github_repository_name": "{{ cookiecutter.project_slug }}"
+	"github_repository_name": "{{ cookiecutter.project_slug.lower().replace(' ', '-').replace('_','-') }}"
 }
