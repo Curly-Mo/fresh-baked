@@ -15,11 +15,6 @@ def main():
         cookie_path = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     else:
         cookie_path = os.environ['TRAVIS_BUILD_DIR']
-    print(cookie_path)
-    print(os.path.abspath(__file__))
-    # extra_context = {
-    #     "python_version": sys.version[:3],  # install with travis python V
-    # }
 
     with tempfile.TemporaryDirectory() as temp_dir:
         os.chdir(temp_dir)
@@ -28,9 +23,11 @@ def main():
             cookie_path,
             no_input=True,
         )
-            # extra_context=extra_context)
+
+        version = sys.version_info
+        tox_env = 'py{major}{minor}'.format(major=version.major, minor=version.minor)
         os.chdir('my_project_name')
-        subprocess.check_call(['tox'])
+        subprocess.check_call(['tox', '-e', tox_env])
 
 
 if __name__ == '__main__':
