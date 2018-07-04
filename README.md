@@ -11,12 +11,12 @@ A modern python cookiecutter template
 
 * Use [poetry](https://github.com/sdispater/poetry) to manage dependencies in ``pyproject.toml`` and deploy to PyPi.
 * Choose License: **GPL, MIT, BSD, ISC, Apache**
-* **Badges** for [Travis](https://travis-ci.org), [Coveralls](https://coveralls.io, [ReadtheDocs](https://readthedocs.org, [PyUp](https://pyup.io/), [Pypi](https://pypi.org)
+* **Badges** for [Travis](https://travis-ci.org), [Coveralls](https://coveralls.io), [ReadtheDocs](https://readthedocs.org), [PyUp](https://pyup.io/), [Pypi](https://pypi.org)
 * **Sphinx docs**: Documentation ready for generation and publication to **ReadTheDoc**
 * **isort, Yapf, black**: code formatting
 * **Pylint, Flake8**: code style
 * **pytest**: unit testings
-* **pytest-cov**: unit test reports
+* **pytest-cov**: test coverage reports
 * **tox**: for managing tests
 * **Travis-CI**: continuous integration
 * **Coveralls**: CI coverage reporting
@@ -29,12 +29,12 @@ cookiecutter https://github.com/Curly-Mo/fresh-baked
 ```
 
 ### Setup integration services
-    * commit your work!
-    * create your [GitHub](https://github.com) repo
-    * link your project on [Travis](https://travis-ci.org)
-    * link your project on [Coveralls](https://coveralls.io)
-    * link your project on [Read the Docs](https://readthedocs.org)
-    * link your project on [PyUp](https://pyup.io/)
+* commit your work!
+* create your [GitHub](https://github.com) repo
+* link your project on [Travis](https://travis-ci.org)
+* link your project on [Coveralls](https://coveralls.io)
+* link your project on [Read the Docs](https://readthedocs.org)
+* link your project on [PyUp](https://pyup.io/)
 ### Push to GithHub
 ```console
 git commit -m 'intial files'
@@ -49,8 +49,8 @@ poetry install
 
 ### Tests
 ```console
-tox
+poetry run tox
 ```
 
 ## License
-[{{ cookiecutter.open_source_license}}](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}/blob/master/LICENSE)
+[LGPL-3.0](https://github.com/Curly-Mo/fresh-baked/blob/master/LICENSE)
