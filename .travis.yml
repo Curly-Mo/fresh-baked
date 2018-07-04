@@ -4,12 +4,10 @@ python:
   - 3.4
   - 3.5
   - 3.6
-  - 3.7
-  - 3.7-dev
-  # - pypy3.6
+  - pypy3
 
 install:
-  - pip install pipenv cookiecutter
+  - pip install cookiecutter
   - pip install tox-travis
 
 script:
