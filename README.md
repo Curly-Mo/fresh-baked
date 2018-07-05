@@ -29,7 +29,6 @@ cookiecutter https://github.com/Curly-Mo/fresh-baked
 ```
 
 ### Setup integration services
-* commit your work!
 * create your [GitHub](https://github.com) repo
 * link your project on [Travis](https://travis-ci.org)
 * link your project on [Coveralls](https://coveralls.io)
@@ -45,6 +44,7 @@ git push origin master
 ```console
 curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
 poetry install
+git add pyproject.lock
 ```
 
 ### Tests
