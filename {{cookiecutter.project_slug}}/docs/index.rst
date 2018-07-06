@@ -1,8 +1,9 @@
-Welcome to {{ cookiecutter.project_name }} documentation!
-==========={{ '=' * (cookiecutter.project_name|length) }}===============
+Welcome to {{ cookiecutter.project_name }}'s documentation!
+==========={{ '=' * (cookiecutter.project_name|length) }}=================
 
 .. toctree::
-	:maxdepth: 2
+   :maxdepth: 2
+   :caption: Contents:
 
 
 
