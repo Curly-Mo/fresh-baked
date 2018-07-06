@@ -38,9 +38,9 @@ if __name__ == '__main__':
               bcolors.END,
               bcolors.TEXT + "'{{ cookiecutter.github_username }}'" + bcolors.END,
               sh_newline,
+              bcolors.TEXT,
               "'{",
               '{{ cookiecutter.github_repository_name }}',
-              "'" + sh_newline + "'",
               '{{ cookiecutter.project_short_description }}',
               "}'",
               bcolors.END))

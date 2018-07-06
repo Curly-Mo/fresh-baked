@@ -29,14 +29,13 @@ See https://{{ cookiecutter.github_repository_name }}.readthedocs.org/en/latest/
 
 ## Development
 ```console
-pip install {{ cookiecutter.github_repository_name }}
 pip install poetry
 poetry install
 ```
 
 ### Tests
 ```console
-tox
+poetry test
 ```
 
 ## License

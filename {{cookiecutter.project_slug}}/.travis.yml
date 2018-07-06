@@ -11,13 +11,13 @@ python:
 
 install:
   - pip install poetry
-  - pip install tox-travis
 
 script:
-  - tox
+  - poetry run detox
 
 after_success:
-  poetry run coveralls
+  - pip install python-coveralls
+  - coveralls
 
 notifications:
   email:
