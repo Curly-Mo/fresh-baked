@@ -8,10 +8,10 @@ python:
 
 install:
   - pip install cookiecutter
-  - pip install tox-travis
+  - pip install detox
 
 script:
-  - tox
+  - detox
 
 after_success:
   - yes '' | cookiecutter .
