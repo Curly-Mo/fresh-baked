@@ -13,7 +13,22 @@ install:
 script:
   - tox
 
+after_success:
+  - yes '' | cookiecutter .
+
 notifications:
   email:
     on_success: change
     on_failure: change
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  local-dir: fresh_baked_skeleton
+  repo: Curly-Mo/fresh-baked-skeleton
+  target-branch: master
+  verbose: true
+  on:
+    branch: master
