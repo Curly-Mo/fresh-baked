@@ -1,5 +1,5 @@
 Welcome to {{ cookiecutter.project_name }} documentation!
-===========================================
+==========={{ '=' * (cookiecutter.project_name|length) }}===============
 
 .. toctree::
 	:maxdepth: 2

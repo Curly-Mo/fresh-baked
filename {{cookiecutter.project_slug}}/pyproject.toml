@@ -6,7 +6,7 @@ authors = [
     "{{ cookiecutter.full_name }} <{{ cookiecutter.email }}>",
 ]
 license = "{{ cookiecutter.open_source_license }}"
-readme = "README.rst"
+readme = "README.md"
 homepage = ""
 repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}"
 documentation = "https://{{ cookiecutter.project_slug }}.readthedocs.org/en/latest/"
@@ -33,4 +33,3 @@ black = { version = "^18.3-alpha.0", python = "^3.6" }
 yapf = '*'
 flake8 = '*'
 isort = '*'
-python-coveralls = '*'
