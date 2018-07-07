@@ -11,6 +11,7 @@ python:
 
 install:
   - pip install poetry
+  - poetry install -v
 
 script:
   - poetry run detox
