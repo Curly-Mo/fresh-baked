@@ -26,10 +26,11 @@ typing = "^3.6"
 pytest = "~3.4"
 pytest-cov = "~2.5"
 pytest-mock = "~1.9"
-tox = "~3.0"
-sphinx = '*'
-sphinx-autobuild = '*'
+detox = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+sphinx_rtd_theme = "*"
 black = { version = "^18.3-alpha.0", python = "^3.6" }
-yapf = '*'
-flake8 = '*'
-isort = '*'
+yapf = "*"
+flake8 = "*"
+isort = "*"

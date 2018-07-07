@@ -1,6 +1,5 @@
 import os
 import subprocess
-import sys
 import tempfile
 from cookiecutter.main import cookiecutter
 """
@@ -24,10 +23,8 @@ def main():
             no_input=True,
         )
 
-        version = sys.version_info
-        tox_env = 'py{major}{minor}'.format(major=version.major, minor=version.minor)
         os.chdir('fresh_baked_skeleton')
-        subprocess.check_call(['tox', '-e', tox_env])
+        subprocess.check_call(['detox'])
 
 
 if __name__ == '__main__':
