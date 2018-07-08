@@ -14,7 +14,7 @@ install:
   - poetry install -v
 
 script:
-  - poetry run detox
+  - poetry run detox -v
 
 after_success:
   - pip install python-coveralls
