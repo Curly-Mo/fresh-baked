@@ -30,7 +30,13 @@ detox = "*"
 sphinx = "*"
 sphinx-autobuild = "*"
 sphinx_rtd_theme = "*"
+doc8 = "*"
 black = { version = "^18.3-alpha.0", python = "^3.6" }
 yapf = "*"
 flake8 = "*"
 isort = "*"
+bandit = "*"
+mypy = "*"
+
+[tool.black]
+line-length = 100
