@@ -36,7 +36,10 @@ yapf = "*"
 flake8 = "*"
 isort = "*"
 bandit = "*"
-mypy = "*"
+mypy = { version = "*", optional = true }
+
+[tool.poetry.extras]
+mypy = ["mypy"]
 
 [tool.black]
 line-length = 100
