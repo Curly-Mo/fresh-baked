@@ -14,7 +14,7 @@ See an example of what this cookiecutter creates: https://github.com/Curly-Mo/fr
 
 * Use [poetry](https://github.com/sdispater/poetry) to manage dependencies in ``pyproject.toml`` and deploy to PyPi.
 * Choose License: **GPL, MIT, BSD, ISC, Apache**
-* **Badges** for [Travis](https://travis-ci.org), [Coveralls](https://coveralls.io), [ReadtheDocs](https://readthedocs.org), [PyUp](https://pyup.io/), [PyPi](https://pypi.org)
+* **Badges** for [Travis](https://travis-ci.org), [Coveralls](https://coveralls.io), [ReadtheDocs](https://readthedocs.org), [PyPi](https://pypi.org)
 * **Sphinx docs**: Documentation ready for generation and publication to **ReadtheDocs**
 * **isort, Yapf, black**: code formatting
 * **Pylint, Flake8**: code style
@@ -36,7 +36,6 @@ cookiecutter https://github.com/Curly-Mo/fresh-baked
 * link your project on [Travis](https://travis-ci.org)
 * link your project on [Coveralls](https://coveralls.io)
 * link your project on [Read the Docs](https://readthedocs.org)
-* link your project on [PyUp](https://pyup.io/)
 ### Push to GithHub
 ```console
 git commit -m 'intial files'
