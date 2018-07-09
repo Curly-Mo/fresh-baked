@@ -30,7 +30,7 @@ detox = "*"
 sphinx = "*"
 sphinx-autobuild = "*"
 sphinx_rtd_theme = "*"
-doc8 = "*"
+sphinxcontrib-apidoc = "*"
 black = { version = "^18.3-alpha.0", python = "^3.6" }
 yapf = "*"
 flake8 = "*"
