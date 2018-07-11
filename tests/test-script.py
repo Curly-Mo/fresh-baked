@@ -24,7 +24,7 @@ def main():
         )
 
         os.chdir('fresh_baked_skeleton')
-        subprocess.check_call(['detox', '-v'])
+        subprocess.check_call(['detox', '-vv'])
 
 
 if __name__ == '__main__':
