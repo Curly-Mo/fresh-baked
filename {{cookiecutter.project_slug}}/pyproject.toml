@@ -7,7 +7,7 @@ authors = [
 ]
 license = "{{ cookiecutter.open_source_license }}"
 readme = "README.md"
-homepage = ""
+homepage = "{{ cookiecutter.homepage }}"
 repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}"
 documentation = "https://{{ cookiecutter.project_slug }}.readthedocs.org/en/latest/"
 keywords = []
