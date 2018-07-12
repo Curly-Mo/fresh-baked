@@ -11,7 +11,7 @@ install:
   - pip install detox
 
 script:
-  - detox
+  - detox -vv
 
 after_success:
   - yes '' | cookiecutter .

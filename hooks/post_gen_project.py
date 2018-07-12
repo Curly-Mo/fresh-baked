@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 
-import os
-import pathlib
 import subprocess
 
-PROJECT_DIRECTORY = os.path.realpath(os.path.curdir)
-project_dir = pathlib.Path(PROJECT_DIRECTORY)
+# support python 2.7 input
+try:
+    input = raw_input
+except NameError:
+    pass
 
 
-class bcolors:
+class colors:
     COMMAND = '\33[32m'
     TEXT = '\33[36m'
     BOLD = '\033[1m'
@@ -16,38 +17,33 @@ class bcolors:
     END = '\033[0m'
 
 
+def ask_run(args):
+    print('')
+    print_args = args[:]
+    print_args[0] = colors.COMMAND + print_args[0] + colors.END
+    response = input("Execute command: `{}`\n[Y/n]:".format(' '.join(print_args)))
+    if response.lower() in ['y', 'yes', '']:
+        subprocess.check_call(args)
+
+
+def print_run(args):
+    print('')
+    print_args = args[:]
+    print_args[0] = colors.COMMAND + print_args[0] + colors.END
+    print(' '.join(print_args))
+    subprocess.check_call(args)
+
+
 if __name__ == '__main__':
+    print('')
     print('Creating git repository')
-    subprocess.check_call(['git', 'init', '.'])
-    subprocess.check_call(['git', 'add', '.'])
+    print_run(['git', 'init', '.'])
+    print_run(['git', 'add', '.'])
 
-    # Add a dir for sphinx
-    staticdir = project_dir / 'docs/_static/'
-    try:
-        staticdir.mkdir()
-    except FileExistsError:
-        pass
-
-    sh_newline = '\\\n     '
-    print("\n")
-    print("To finish up, run the following commands")
-    print("{}cd{} {{ cookiecutter.project_slug }}/".format(bcolors.COMMAND, bcolors.END))
-    print('{}curl{} -u {} https://api.github.com/user/repos {}-d {}{}"name":"{}","description":"{}"{}{}'
-          .format(
-              bcolors.COMMAND,
-              bcolors.END,
-              bcolors.TEXT + "'{{ cookiecutter.github_username }}'" + bcolors.END,
-              sh_newline,
-              bcolors.TEXT,
-              "'{",
-              '{{ cookiecutter.github_repository_name }}',
-              '{{ cookiecutter.project_short_description }}',
-              "}'",
-              bcolors.END))
-    print("{}git{} commit -m {}'initial files'{}".format(
-        bcolors.COMMAND, bcolors.END, bcolors.TEXT, bcolors.END))
-    print('{}git{} remote add origin {}'.format(
-        bcolors.COMMAND, bcolors.END,
-        'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}.git'
-    ))
-    print("{}git{} push origin master".format(bcolors.COMMAND, bcolors.END))
+    if '{{ cookiecutter.execute_post_install_script }}'.lower() not in ['n', 'no']:
+        ask_run([
+            'curl', '-u', '{{ cookiecutter.github_username }}', 'https://api.github.com/user/repos', '-d',
+            '{"name":"{{ cookiecutter.github_repository_name }}","description":"{{ cookiecutter.project_short_description }}","homepage":"{{ cookiecutter.homepage }}"}'])
+        ask_run(['git', 'commit', '-m', 'initial files'])
+        ask_run(['git', 'remote', 'add', 'origin', 'https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}.git'])
+        ask_run(['git', 'push', 'origin', 'master'])
