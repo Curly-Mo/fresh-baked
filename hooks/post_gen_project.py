@@ -40,8 +40,7 @@ if __name__ == '__main__':
     print_run(['git', 'init', '.'])
     print_run(['git', 'add', '.'])
 
-    response = input("Execute post install script? [y/N]:")
-    if response.lower() in ['y', 'yes']:
+    if '{{ cookiecutter.execute_post_install_script }}'.lower() not in ['n', 'no']:
         ask_run([
             'curl', '-u', '{{ cookiecutter.github_username }}', 'https://api.github.com/user/repos', '-d',
             '{"name":"{{ cookiecutter.github_repository_name }}","description":"{{ cookiecutter.project_short_description }}","homepage":"{{ cookiecutter.homepage }}"}'])

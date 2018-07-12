@@ -9,5 +9,6 @@
 	"github_username": "Curly-Mo",
 	"pypi_username": "{{ cookiecutter.github_username }}",
 	"github_repository_name": "{{ cookiecutter.project_slug.lower().replace(' ', '-').replace('_','-') }}",
-  "homepage": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}"
+  "homepage": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}",
+  "execute_post_install_script": "n"
 }
