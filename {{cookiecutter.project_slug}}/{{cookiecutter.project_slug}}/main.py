@@ -2,4 +2,5 @@
 
 
 def main():
-    return "hello"
+    """This is all my project does"""
+    return 'hello'
