@@ -1,7 +1,7 @@
 """Command line interface for {{ cookiecutter.project_slug }}"""
 import click
 
-import {{ cookiecutter.project_slug }}.main
+from {{ cookiecutter.project_slug }} import main
 
 
 @click.command()
