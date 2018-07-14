@@ -1,13 +1,10 @@
 """
-test_{{ cookiecutter.project_slug }}
+test_main
 ----------------------------------
-Tests for `{{ cookiecutter.project_slug }}` module.
+Tests for `main` module.
 """
+from {{cookiecutter.project_slug}} import main
 
 
-# {{cookiecutter.project_name}}
-from {{cookiecutter.project_slug}} import {{cookiecutter.project_slug}}
-
-
-def test_{{cookiecutter.project_slug}}():
-    assert {{cookiecutter.project_slug}}.main() == "hello"
+def test_main():
+    assert main.main() == "hello"
