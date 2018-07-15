@@ -6,7 +6,7 @@ A modern python cookiecutter template
 
 [PEP518](https://www.python.org/dev/peps/pep-0518) approved pyproject.toml, let's start using it for new projects.\
 [poetry](https://github.com/sdispater/poetry) is the most well-developed tool so far utilizing pyproject.toml for dependency management, package building, and publishing.\
-Together they can fully replace the need for `setup.py`, `setup.cfg`, `pip`, `pipenv`, `requirements.txt`, `bumpversion`, `twine`...
+Together they can fully replace the need for `setup.py`, `setup.cfg`, `pipenv`, `requirements.txt`, `bumpversion`, `twine`...
 
 See an example of what this cookiecutter creates: https://github.com/Curly-Mo/fresh-baked-skeleton
 
@@ -23,6 +23,7 @@ See an example of what this cookiecutter creates: https://github.com/Curly-Mo/fr
 * **tox**: for managing tests
 * **Travis-CI**: continuous integration
 * **Coveralls**: CI coverage reporting
+* [Click](http://click.pocoo.org/5/why/) for CLI scripts
 
 ## Usage
 
