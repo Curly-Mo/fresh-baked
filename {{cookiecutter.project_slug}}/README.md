@@ -46,8 +46,8 @@ poetry run pytest --cov={{ cookiecutter.project_slug }}
 ### Docker
 To run with docker
 ```console
-docker build -t {{ cookiecutter.project_name }}.image .
-docker run {{ cookiecutter.project_slug }}.image {{ cookiecutter.project_slug }} --help
+docker build -t {{ cookiecutter.project_name }} .
+docker run {{ cookiecutter.project_slug }}:latest {{ cookiecutter.project_slug }} --help
 ```
 
 ## License
