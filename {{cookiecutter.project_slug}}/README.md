@@ -49,6 +49,3 @@ To run with docker
 docker build -t {{ cookiecutter.project_name }} .
 docker run {{ cookiecutter.project_slug }}:latest {{ cookiecutter.project_slug }} --help
 ```
-
-## License
-[{{ cookiecutter.open_source_license}}](https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}/blob/master/LICENSE)

@@ -1,6 +1,8 @@
 # Fresh Baked
 
 [![Build Status](https://travis-ci.org/Curly-Mo/fresh-baked.svg?branch=master)](https://travis-ci.org/Curly-Mo/fresh-baked)
+[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Curly-Mo/fresh-baked/blob/master/LICENSE)
+
 
 A modern python cookiecutter template
 
@@ -61,6 +63,3 @@ poetry run tox
 poetry build
 poetry publish
 ```
-
-## License
-[LGPL-3.0](https://github.com/Curly-Mo/fresh-baked/blob/master/LICENSE)
