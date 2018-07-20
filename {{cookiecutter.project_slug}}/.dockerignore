@@ -72,8 +72,3 @@ ENV/
 /site
 
 .mypy_cache/
-
-# custom
-data/
-saved_models/
-dump/

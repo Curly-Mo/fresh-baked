@@ -1,7 +1,7 @@
 # Fresh Baked
 
 [![Build Status](https://travis-ci.org/Curly-Mo/fresh-baked.svg?branch=master)](https://travis-ci.org/Curly-Mo/fresh-baked)
-[![License](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/Curly-Mo/fresh-baked/blob/master/LICENSE)
+[![License](https://img.shields.io/github/license/Curly-Mo/fresh-baked.svg)](https://github.com/Curly-Mo/fresh-baked/blob/master/LICENSE)
 
 
 A modern python cookiecutter template
