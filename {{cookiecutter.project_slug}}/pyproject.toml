@@ -22,7 +22,7 @@ classifiers = [
 
 # Requirements
 [tool.poetry.dependencies]
-python = "^3.4"
+python = "^3.6"
 typing = "^3.6"
 click = "^6.7"
 
