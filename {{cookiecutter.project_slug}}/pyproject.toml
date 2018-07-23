@@ -29,7 +29,6 @@ click = "^6.7"
 [tool.poetry.dev-dependencies]
 pytest = "~3.4"
 pytest-cov = "~2.5"
-pytest-mock = "~1.9"
 detox = "*"
 sphinx = "*"
 sphinx-autobuild = "*"

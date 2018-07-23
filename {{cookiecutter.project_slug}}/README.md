@@ -40,7 +40,7 @@ poetry run {{ cookiecutter.project_slug }} --help
 
 ### Tests
 ```console
-poetry run pytest --cov={{ cookiecutter.project_slug }}
+poetry run tox
 ```
 
 ### Docker
