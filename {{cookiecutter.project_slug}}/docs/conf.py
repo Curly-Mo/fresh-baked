@@ -14,6 +14,7 @@
 #
 import os
 import sys
+from unittest.mock import MagicMock
 sys.path.insert(0, os.path.abspath('..'))
 
 
@@ -178,8 +179,18 @@ intersphinx_mapping = {'https://docs.python.org/': None}
 # If true, `todo` and `todoList` produce output, else they produce nothing.
 todo_include_todos = True
 
-# -- Options for sphinxcontrib.apidoc extension ----------------------------------------------
+# -- Options for sphinxcontrib.apidoc extension ------------------------------
 
 apidoc_module_dir = '../' + project_slug
 apidoc_excluded_paths = ['tests']
 apidoc_separate_modules = True
+
+# -- mock deps that depend on C binaries for readthedocs ---------------------
+class Mock(MagicMock):
+    @classmethod
+    def __getattr__(cls, name):
+        return MagicMock()
+
+
+MOCK_MODULES = ['tensorflow', 'numpy', 'pandas']
+sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
