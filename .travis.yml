@@ -12,13 +12,13 @@ install:
 script:
   - tox -vv
 
-after_success:
-  - yes '' | cookiecutter .
-
 notifications:
   email:
     on_success: change
     on_failure: change
+
+after_success:
+  - yes '' | cookiecutter .
 
 deploy:
   provider: pages

@@ -20,3 +20,19 @@ notifications:
   email:
     on_success: change
     on_failure: change
+
+env:
+  # For automated deployment of tagged commits, set encrypted pypi credentials using:
+  # $ gem install travis
+  # $ travis encrypt PYPI_USER="secretuser" --add
+  # $ travis encrypt PYPI_PASSWORD="secretpassword" --add
+  global:
+    - secure: S/wA7AJpmdZ7VyYM6MvMJ/I+ti95PykpEqVVXGFcNUw8FWUQMX057TCTc19HBnbvQE3j5GdGIKmWoOE1VPvttni//wOWWuVwk8rZWhuoGzSQBIXEfS68edv9xzt7dx3PtZhKvgGujOVzp+aCw0eP8d1x8XsG1fsRJxjMj5xUKeWgR9Q1LPoKBubAAC0e6wcw7p+5T5FvILGENRxe44Cytb2KkTYgqeSTCoSY+9JFuXhMGri8nGxO3UgU1xTQ/IrDY0Owp4cT83e/zOhqL9GElJ2bk8q1HLxrLzKpk2hRuj/dSAkHNMbnJpmR1yc/k5zk6SElGkCD3UKtU1C27+yiFWTtgla0MywCXUzi3AsDgnLctN+W/eluz+ZCuMARp5V6HO5P0fIKOE33456EjSDkjaHgyJH7vflzd5qVDoftPKNWs94pEQRfNOricTuZpbWuDbvlQTpzk0eIONzvV8dKFFAhBUtx+CMhrdQRNRL05kKnTshrvn1z+VNeHWo6wKsS5gwgl589mBlEbM/79iPz4Qa6b9KLoXemUDncaI5VKngyDMjMVrwFVDKtOoyQYLxmwd3NDAZDcXP+BeV1Nj+SNsIBaAj9PhZJRxiJ822cyDMO6sCBzsBQXK7yD/W6CgZ/dwUoe1yg5QxT0zKCzsaVER591om88oCUwbcPsBJwZEw=
+    - secure: n9iM1/d1BYFVA59MYMYbuuqU2lYmNP/bdXK2xUn2UfPFEGxaeXC3UCXvb9QT+2cN5z+CcT7M/or5EOWxQWvCCbdL/gGWm/eDsiRrCDyGyKr2UE5QL53aM+RPtEyoPYFQJs3WlXJhD8AjVIfHm5K/5HOPXIOhZk72khGdnnNgxjcWe/Fs565PYljDiXZn0HjlVMRJL0kt2EX+sFfqB3fe7ucDxY2sxUBmhMZ0KJFrR4eqdbb+Xq9K4u3slvY1LO7KsZKCQ6Ruwyd6sxBGx6bR/2lkvaJwzLWaC6RmtA/v05vlsFtbEwGQc7vSwf2Yedi9WLqyqy5eQSnFM6pjHpXSSldFb7g57HPVbQFQH52JwVmnNTKPh0iMGtkaW2Tvfwz5cr+lU52dZ88dur4gUjYWrDZO2Ob0qjYWo+9sBCyAiWUzb6oyvsdN57Ugn/LB3KcmJdO8DutT0YK37mWJhEd/ijZBJMReRTCLDC/i/Af9IxMmsdjl/zYKeX9lS8ihSFWABsojPBRwhD6NjGLtyZc9MBuIRpws8nTQ5xpWEJp1VOSMV0dIYIsigtdziSPgO3X1ie7lehmMELZn9E/55WkJ7nUeY69Rhu6am/cusb7gYscwL6fycr/+5/ZA+LL1fuQKkJ/90RO8r0rc1qCxj3SCIyGlYytktVS+nRrBkVr6C68=
+
+deploy:
+  # Deploy tags to PyPi
+  provider: script
+  script: poetry -vvv publish --build -u $PYPI_USER -p $PYPI_PASSWORD
+  on:
+    tags: true
