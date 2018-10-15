@@ -2,14 +2,15 @@ language: python
 
 python:
   - 3.6
-  - pypy3
+  # - 3.7
+  # - pypy3
 
 install:
   - pip install poetry
   - poetry install -v
 
 script:
-  - poetry run detox -vv
+  - poetry run tox -vv
 
 after_success:
   - pip install python-coveralls
