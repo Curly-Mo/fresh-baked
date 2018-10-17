@@ -17,7 +17,7 @@ notifications:
     on_success: change
     on_failure: change
 
-after_success:
+before_deploy:
   - yes '' | cookiecutter .
   - pip install poetry
   - cd fresh_baked_skeleton
