@@ -19,6 +19,9 @@ notifications:
 
 after_success:
   - yes '' | cookiecutter .
+  - pip install poetry
+  - cd fresh_baked_skeleton
+  - for i in `seq $TRAVIS_BUILD_NUMBER`; do poetry version; done
 
 deploy:
   provider: pages
