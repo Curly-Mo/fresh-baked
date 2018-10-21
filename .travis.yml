@@ -21,7 +21,7 @@ before_deploy:
   - yes '' | cookiecutter .
   - pip install poetry
   - cd fresh_baked_skeleton
-  - poetry version 1.0.0-alpha.${TRAVIS_BUILD_NUMBER}
+  - poetry version 0.1.0-alpha.${TRAVIS_BUILD_NUMBER}
 
 deploy:
   provider: pages
