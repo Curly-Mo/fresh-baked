@@ -16,16 +16,16 @@ See an example of what this cookiecutter creates: https://github.com/Curly-Mo/fr
 
 * Use [poetry](https://github.com/sdispater/poetry) to manage dependencies in ``pyproject.toml`` and deploy to PyPi.
 * Choose License: **GPL, MIT, BSD, ISC, Apache**
-* **Badges** for [Travis](https://travis-ci.org), [Coveralls](https://coveralls.io), [ReadtheDocs](https://readthedocs.org), [PyPi](https://pypi.org)
-* **Sphinx docs**: Documentation ready for generation and publication to **ReadtheDocs**
-* **isort, Yapf, black**: code formatting
+* **isort, black**: code formatting
 * **Pylint, Flake8**: code style
 * **pytest**: unit testings
 * **pytest-cov**: test coverage reports
 * **tox**: for managing tests
+* [Click](http://click.pocoo.org/5/why/) for CLI scripts
+* **Badges** for [Travis](https://travis-ci.org), [Coveralls](https://coveralls.io), [ReadtheDocs](https://readthedocs.org), [PyPi](https://pypi.org)
 * **Travis-CI**: continuous integration
 * **Coveralls**: CI coverage reporting
-* [Click](http://click.pocoo.org/5/why/) for CLI scripts
+* **Sphinx docs**: Documentation ready for generation and publication to **ReadtheDocs**
 
 ## Usage
 
@@ -50,7 +50,6 @@ Watch as your badges turn :green_heart:green:green_heart:
 ```console
 pip install poetry
 poetry install
-git add pyproject.lock
 ```
 
 ### Tests

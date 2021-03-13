@@ -29,7 +29,6 @@ See https://{{ cookiecutter.github_repository_name }}.readthedocs.org/en/latest/
 ## Development
 ```console
 pip install poetry
-cd {{ cookiecutter.github_repository_name }}
 poetry install
 ```
 ### Run
@@ -46,6 +45,6 @@ poetry run tox
 ### Docker
 To run with docker
 ```console
-docker build -t {{ cookiecutter.project_name }} .
+docker build -t {{ cookiecutter.project_slug }} .
 docker run {{ cookiecutter.project_slug }}:latest {{ cookiecutter.project_slug }} --help
 ```

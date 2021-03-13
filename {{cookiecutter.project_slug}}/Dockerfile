@@ -3,7 +3,7 @@ FROM python:3.6
 MAINTAINER {{ cookiecutter.full_name }} <{{ cookiecutter.email }}>
 
 # install poetry
-RUN curl -sSL https://raw.githubusercontent.com/sdispater/poetry/master/get-poetry.py | python
+RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python
 
 # create application directory
 RUN mkdir /app
