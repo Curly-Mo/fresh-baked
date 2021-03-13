@@ -1,8 +1,0 @@
-# reqs will have to duplicated here for ReadtheDocs to pick it up
-# this is only needed if you want ReadtheDocs to run apidoc to autogenerate docs
-# alternatively, remove sphinxcontrib-apidoc from conf.py, run apidoc locally
-#   and commit the generated files to git
-sphinx
-sphinx-rtd-theme
-sphinxcontrib-apidoc
-click
