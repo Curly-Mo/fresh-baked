@@ -1,6 +1,7 @@
 """Command line interface for {{ cookiecutter.project_slug }}"""
-import click
 import logging
+
+import click
 
 from {{ cookiecutter.project_slug }} import main
 
