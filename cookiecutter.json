@@ -5,7 +5,7 @@
 	"project_short_description": "Short Description of My Library",
 	"project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
 	"open_source_license": ["LGPL-3.0","MIT", "BSD-3-Clause", "ISC", "Apache-2.0", "Not open source (I'm a bad person)"],
-	"project_version": "0.1.0-alpha.0",
+	"project_version": "0.1.0",
 	"github_username": "Curly-Mo",
 	"github_repository_name": "{{ cookiecutter.project_slug.lower().replace(' ', '-').replace('_','-') }}",
   "homepage": "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}",
