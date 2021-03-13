@@ -24,7 +24,8 @@ def main():
         )
 
         os.chdir('fresh_baked_skeleton')
-        subprocess.check_call(['poetry', 'run', 'tox', '-vv'])
+        subprocess.check_call(['poetry', 'install, '-v'])
+        subprocess.check_call(['poetry', 'run', 'tox', '-v'])
 
 
 if __name__ == '__main__':
