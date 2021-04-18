@@ -1,6 +1,6 @@
 # {{ cookiecutter.project_name }}
 
-[![Build Status](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}.svg?branch=master)](https://travis-ci.org/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }})
+[![Build Status](https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}.svg?branch=master)](https://travis-ci.com/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }})
 [![Coverage](https://coveralls.io/repos/github/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }}/badge.svg)](https://coveralls.io/github/{{ cookiecutter.github_username }}/{{ cookiecutter.github_repository_name }})
 [![Documentation](https://readthedocs.org/projects/{{ cookiecutter.github_repository_name }}/badge/?version=latest)](https://{{ cookiecutter.github_repository_name }}.readthedocs.org/en/latest/?badge=latest)
 [![PyPI](https://img.shields.io/pypi/v/{{ cookiecutter.github_repository_name }}.svg)](https://pypi.python.org/pypi/{{ cookiecutter.github_repository_name }})
@@ -29,7 +29,6 @@ See https://{{ cookiecutter.github_repository_name }}.readthedocs.org/en/latest/
 ## Development
 ```console
 pip install poetry
-cd {{ cookiecutter.github_repository_name }}
 poetry install
 ```
 ### Run
@@ -46,6 +45,6 @@ poetry run tox
 ### Docker
 To run with docker
 ```console
-docker build -t {{ cookiecutter.project_name }} .
+docker build -t {{ cookiecutter.project_slug }} .
 docker run {{ cookiecutter.project_slug }}:latest {{ cookiecutter.project_slug }} --help
 ```
