@@ -14,25 +14,23 @@
 #
 import os
 import sys
-from unittest.mock import MagicMock
 sys.path.insert(0, os.path.abspath('..'))
 
 
 # -- Project information -----------------------------------------------------
 
 project = '{{ cookiecutter.project_name }}'
-ropyright = '{% now 'local', '%Y' %}, {{ cookiecutter.full_name }}'
+copyright = '{% now 'local', '%Y' %}, {{ cookiecutter.full_name }}'
 author = '{{ cookiecutter.full_name }}'
 description = '{{ cookiecutter.project_short_description }}'
-project_slug = '{{ cookiecutter.project_slug }}'
 
 # The short X.Y version
-version = ''
+version = '{{ cookiecutter.project_version }}'
 # The full version, including alpha/beta/rc tags
 release = '{{ cookiecutter.project_version }}'
 
-
 # -- General configuration ---------------------------------------------------
+project_slug = '{{ cookiecutter.project_slug }}'
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
@@ -186,11 +184,4 @@ apidoc_excluded_paths = ['tests']
 apidoc_separate_modules = True
 
 # -- mock deps that depend on C binaries for readthedocs ---------------------
-class Mock(MagicMock):
-    @classmethod
-    def __getattr__(cls, name):
-        return MagicMock()
-
-
-MOCK_MODULES = ['tensorflow', 'numpy', 'pandas']
-sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+autodoc_mock_imports = ['tensorflow', 'numpy', 'pandas']
