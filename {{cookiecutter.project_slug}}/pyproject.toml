@@ -1,5 +1,5 @@
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry_core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
@@ -16,7 +16,6 @@ repository = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecut
 documentation = "https://{{ cookiecutter.project_slug }}.readthedocs.org/en/latest/"
 keywords = []
 classifiers = [
-    # "License :: OSI Approved :: {{ cookiecutter.open_source_license }}",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3",
 ]
@@ -29,6 +28,15 @@ classifiers = [
 python = "^3.7"
 typing = "^3.7"
 click = "^7.1"
+# readthedocs requires sphinx optional deps here since dev-deps don't work with extras
+Sphinx = {version = "*", optional = true}
+sphinx-autobuild = {version = "*", optional = true}
+sphinx-rtd-theme = {version = "*", optional = true}
+sphinxcontrib-apidoc = {version = "*", optional = true}
+sphinx-autodoc-typehints = {version = "*", optional = true}
+recommonmark = {version = "*", optional = true}
+toml = {version = "*", optional = true}
+sphinx-click = {version = "*", optional = true}
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2"
@@ -36,17 +44,34 @@ pytest-cov = "^2.11"
 tox = "*"
 sphinx = "*"
 sphinx-autobuild = "*"
-sphinx_rtd_theme = "*"
+sphinx-rtd-theme = "*"
 sphinxcontrib-apidoc = "*"
-# black only works on python 3.6+
-black = { version = "*", python = "^3.6" }
+sphinx-autodoc-typehints = "*"
+black = { version = "^21.4b0", python = "^3.6" }
 flake8 = "*"
 isort = "*"
 bandit = "*"
-mypy = { version = "*", optional = true }
+mypy = "*"
+sphinx = "*"
+sphinx-autobuild = "*"
+sphinx-rtd-theme = "*"
+sphinxcontrib-apidoc = "*"
+sphinx-autodoc-typehints = "*"
+recommonmark = "*"
+toml = "*"
+sphinx-click = "*"
 
 [tool.poetry.extras]
-mypy = ["mypy"]
+docs = [
+    "sphinx",
+    "sphinx-autobuild",
+    "sphinx-rtd-theme",
+    "sphinxcontrib-apidoc",
+    "sphinx-autodoc-typehints",
+    "recommonmark",
+    "toml",
+    "sphinx-click",
+]
 
 [tool.black]
 line-length = 120
