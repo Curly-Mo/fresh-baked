@@ -42,11 +42,6 @@ sphinx-click = {version = "*", optional = true}
 pytest = "^6.2"
 pytest-cov = "^2.11"
 tox = "*"
-sphinx = "*"
-sphinx-autobuild = "*"
-sphinx-rtd-theme = "*"
-sphinxcontrib-apidoc = "*"
-sphinx-autodoc-typehints = "*"
 black = { version = "^21.4b0", python = "^3.6" }
 flake8 = "*"
 isort = "*"
