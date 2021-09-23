@@ -18,14 +18,14 @@ def cli(ctx, verbose):
 def train():
     click.echo("Perhaps you'll write a train command")
     result = main.main()
-    click.echo("Main output: {}".format(result))
+    click.echo(f"Main output: {result}")
 
 
 @cli.command()
 def predict():
     click.echo("Maybe a predict command")
     result = main.main()
-    click.echo("Main output: {}".format(result))
+    click.echo(f"Main output: {result}")
 
 
 def initLogging(verbosity=0):
